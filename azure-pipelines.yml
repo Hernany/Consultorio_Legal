@@ -30,5 +30,13 @@ steps:
 
 - task: VSTest@2
   inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    # ------------  Use the version installed by installer -----------
+    vsTestVersion: 'toolsInstaller'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
