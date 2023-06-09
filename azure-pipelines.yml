@@ -38,5 +38,3 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)'
     # ------------  Use the version installed by installer -----------
     vsTestVersion: 'toolsInstaller'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
